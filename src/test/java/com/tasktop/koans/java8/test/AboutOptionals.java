@@ -53,7 +53,7 @@ public class AboutOptionals {
 
 	@Test
 	public void optionalsGiveYouSemantic() {
-		Person bob = new Person("Bob", Optional.of("Longboarding"));
+		Person bob = new Person("Bob", Optional.empty());
 
 		boolean bobHasInteresets = bob.getInterests().isPresent();
 
@@ -62,7 +62,7 @@ public class AboutOptionals {
 
 	@Test
 	public void optionalsAreOptional() {
-		Optional<String> optional = Optional.of(null); // FIXME: find out how to create an optional of null
+		Optional<String> optional = Optional.ofNullable(null); // FIXME: find out how to create an optional of null
 
 		String value = optional.orElse("b");
 
